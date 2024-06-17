@@ -6,6 +6,10 @@ import ProductPage from "./pages/ProductPage";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   //  <React.StrictMode>
-  <ProductPage />
+  <>
+    <HomePage />
+    <ProductPage />
+    <StorePage />
+  </>
   //  </React.StrictMode>,
 );

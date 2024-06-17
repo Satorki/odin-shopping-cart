@@ -4,7 +4,7 @@ import NavLink from "../atoms/NavLink";
 
 const Navbar = () => {
   return (
-    <div className="flex justify-between bg-green-300 p-3">
+    <div className="flex justify-between bg-green-300 p-3 items-center">
       <Logo />
       <div className="flex justify-between">
       <NavLink name={"Store"}/>

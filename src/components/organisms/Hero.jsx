@@ -4,7 +4,7 @@ import HomeQuote from "../molecules/HomeQuote";
 
 const Hero = () => {
   return (
-    <div className="relative w-full">
+    <div className="relative">
       <HomeBackground />
       <div className="absolute inset-0 max-w-xl flex items-center mx-auto">
       <HomeQuote />
