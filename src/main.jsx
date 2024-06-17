@@ -3,13 +3,15 @@ import "./index.css";
 import HomePage from "./pages/HomePage";
 import StorePage from "./pages/StorePage";
 import ProductPage from "./pages/ProductPage";
+import CartPage from "./pages/CartPage";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   //  <React.StrictMode>
   <>
-    <HomePage />
+    <CartPage />
+    {/* <HomePage />
     <ProductPage />
-    <StorePage />
+    <StorePage /> */}
   </>
   //  </React.StrictMode>,
 );

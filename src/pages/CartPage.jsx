@@ -1,8 +1,13 @@
 import React from 'react'
+import Navbar from '../components/molecules/Navbar'
+import ProductCartList from '../components/organisms/ProductCartList'
 
 const CartPage = () => {
   return (
-    <div>CartPage</div>
+    <div className='bg-green-700 h-screen'>
+      <Navbar />
+      <ProductCartList />
+    </div>
   )
 }
 
