@@ -4,10 +4,13 @@ import NavLink from "../atoms/NavLink";
 
 const Navbar = () => {
   return (
-    <>
+    <div className="flex justify-between bg-green-300 p-3">
       <Logo />
-      <NavLink />
-    </>
+      <div className="flex justify-between">
+      <NavLink name={"Store"}/>
+      <NavLink name={"Cart"}/>
+      </div>
+    </div>
   );
 };
 

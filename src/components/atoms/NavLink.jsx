@@ -1,7 +1,7 @@
 import React from "react";
 
-const NavLink = () => {
-  return <div>NavLink</div>;
+const NavLink = ({name}) => {
+  return <div className="text-2xl px-5">{name}</div>;
 };
 
 export default NavLink;
