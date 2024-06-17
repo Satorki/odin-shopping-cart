@@ -8,10 +8,10 @@ import CartPage from "./pages/CartPage";
 ReactDOM.createRoot(document.getElementById("root")).render(
   //  <React.StrictMode>
   <>
-    <CartPage />
-    {/* <HomePage />
+    <HomePage />
     <ProductPage />
-    <StorePage /> */}
+    <StorePage />
+    <CartPage />
   </>
   //  </React.StrictMode>,
 );
