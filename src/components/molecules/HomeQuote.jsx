@@ -1,12 +1,12 @@
 import React from "react";
-import ButtonStore from "../atoms/ButtonStore";
+import ButtonStoreOpen from "../atoms/ButtonStoreOpen";
 import Quote from "../atoms/Quote";
 
 const HomeQuote = () => {
   return (
     <div className="bg-black/70 rounded-xl p-3">
       <Quote />
-      <ButtonStore name={"STORE UP"} />
+      <ButtonStoreOpen name={"STORE UP"} />
     </div>
   );
 };

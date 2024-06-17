@@ -1,7 +1,7 @@
 import React from "react";
 
 const PName = () => {
-  return <div className="text-lg text-white">Phone Holder</div>;
+  return <>Phone Holder</>;
 };
 
 export default PName;
