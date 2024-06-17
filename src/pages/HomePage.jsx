@@ -1,14 +1,14 @@
 import Navbar from "../components/molecules/Navbar";
 import Hero from "../components/organisms/Hero";
 
-const Home = () => {
+const HomePage = () => {
   return <>
   <Navbar />
   <Hero />
   </>;
 };
 
-export default Home;
+export default HomePage;
 
 //S Home
 //M Navbar

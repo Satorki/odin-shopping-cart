@@ -1,9 +1,10 @@
 import ReactDOM from "react-dom/client";
 import "./index.css";
-import Home from "./pages/Home";
+import HomePage from "./pages/HomePage";
+import Store from "./pages/StorePage";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   //  <React.StrictMode>
-  <Home />
+  <Store />
   //  </React.StrictMode>,
 );
