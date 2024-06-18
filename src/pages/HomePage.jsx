@@ -2,10 +2,12 @@ import Navbar from "../components/molecules/Navbar";
 import Hero from "../components/organisms/Hero";
 
 const HomePage = () => {
-  return <>
-  <Navbar />
-  <Hero />
-  </>;
+  return (
+    <div className="bg-green-700 h-screen">
+      <Navbar />
+      <Hero />
+    </div>
+  );
 };
 
 export default HomePage;

@@ -5,7 +5,6 @@ const ProductListing = () => {
   return (
     <div className="flex gap-10 m-5 flex-wrap">
       <Product />
-      <Product />
     </div>
   );
 };

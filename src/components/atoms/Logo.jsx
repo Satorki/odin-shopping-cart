@@ -4,7 +4,7 @@ import logo from "../../assets/toppng.com-advance-auto-parts-logo-vector-free-40
 const Logo = () => {
   return (
     <>
-      <img src={logo} alt="" className="w-1/6"/>
+      <img src={logo} alt="" className="w-1/3"/>
     </>
   );
 };

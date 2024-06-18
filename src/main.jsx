@@ -1,17 +1,11 @@
 import ReactDOM from "react-dom/client";
 import "./index.css";
-import HomePage from "./pages/HomePage";
-import StorePage from "./pages/StorePage";
-import ProductPage from "./pages/ProductPage";
-import CartPage from "./pages/CartPage";
+import { RouterProvider } from "react-router-dom";
+import { router } from "./router";
+
 
 ReactDOM.createRoot(document.getElementById("root")).render(
-  //  <React.StrictMode>
   <>
-    <HomePage />
-    <ProductPage />
-    <StorePage />
-    <CartPage />
+    <RouterProvider router={router} />
   </>
-  //  </React.StrictMode>,
 );
