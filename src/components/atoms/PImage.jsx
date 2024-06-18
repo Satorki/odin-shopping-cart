@@ -1,7 +1,7 @@
 import React from "react";
 
-const PImage = () => {
-  return <>img</>;
+const PImage = ({imageData}) => {
+  return <img src={imageData} alt="" className="rounded-lg"/>
 };
 
 export default PImage;

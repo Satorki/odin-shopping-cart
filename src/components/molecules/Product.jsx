@@ -2,22 +2,20 @@ import React from "react";
 import PImage from "../atoms/PImage";
 import PName from "../atoms/PName";
 import PPrice from "../atoms/PPrice";
-import { Link } from "react-router-dom";
 
-const Product = () => {
+const Product = ({imageData, nameData, priceData}) => {
+
   return (
-    <div className="flex flex-col gap-3">
-      <div className="w-96 h-96 bg-yellow-400 rounded-lg">
-        <Link to={"/Product:id"} >
-        <PImage />
-        </Link>
+    <div className="w-80 h-max flex flex-col gap-3 hover:border-white border-black border-t-2 border-b-2 rounded-xl transition duration-300 cursor-pointer">
+      <div className="bg-yellow-400 rounded-lg shadow-xl border-l-2 border-r-2 border-b-2 hover:border-white border-black transition duration-300">
+          <PImage imageData={imageData}/>
       </div>
-      <div className="flex flex-col justify-center items-center w-96 py-2 bg-black rounded-lg">
-        <div className="text-lg text-white">
-          <PName />
+      <div className="flex flex-col justify-center items-center py-2 bg-black rounded-lg shadow-xl">
+        <div className="text-lg text-white text-center">
+          <PName nameData={nameData} />
         </div>
-        <div className="text-lg text-white">
-          <PPrice />
+        <div className="text-lg text-yellow-300">
+          <PPrice priceData={priceData} />
         </div>
       </div>
     </div>

@@ -5,7 +5,6 @@ import ProductListing from "../components/organisms/ProductListing";
 const StorePage = () => {
   return (
     <div className="bg-green-700 h-screen">
-      <Navbar />
       <ProductListing />
     </div>
   );

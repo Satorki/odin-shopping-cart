@@ -5,7 +5,6 @@ import ProductInfo from "../components/organisms/ProductInfo";
 const ProductPage = () => {
   return (
     <div className="bg-green-700 h-screen">
-      <Navbar />
       <ProductInfo />
     </div>
   );

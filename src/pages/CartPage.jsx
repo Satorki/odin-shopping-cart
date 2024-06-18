@@ -5,7 +5,6 @@ import ProductCartList from '../components/organisms/ProductCartList'
 const CartPage = () => {
   return (
     <div className='bg-green-700 h-screen'>
-      <Navbar />
       <ProductCartList />
     </div>
   )

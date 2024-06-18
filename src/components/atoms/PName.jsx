@@ -1,7 +1,7 @@
 import React from "react";
 
-const PName = () => {
-  return <>Phone Holder for Cars on street</>;
+const PName = ({nameData}) => {
+  return <>{nameData}</>;
 };
 
 export default PName;

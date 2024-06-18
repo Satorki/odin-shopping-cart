@@ -3,7 +3,7 @@ import React from 'react'
 const CartTable = () => {
   return (
     <>
-    <div className='flex justify-around text-lg mt-10'>
+    <div className='flex justify-around text-lg pt-10'>
         <p>Product</p>
         <div className='flex gap-10'>
             <p>Price</p>

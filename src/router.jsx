@@ -4,30 +4,38 @@ import ErrorPage from "./pages/ErrorPage";
 import ProductPage from "./pages/ProductPage";
 import CartPage from "./pages/CartPage";
 import StorePage from "./pages/StorePage";
+import RoutingPage from "./pages/RoutingPage";
 
 export const router = createBrowserRouter([
   {
     path: "/",
-    element: <HomePage />,
+    element: <RoutingPage />,
     errorElement: <ErrorPage />,
-  },
-  {
-    path: "/Home",
-    element: <HomePage />,
-    errorElement: <ErrorPage />,
-  },
-  {
-    path: "/Cart",
-    element: <CartPage />,
-  },
-  {
-    path: "/Store",
-    element: <StorePage />,
     children: [
       {
-        path: "Product/:productId",
-        element: <ProductPage />,
+        path: "/Home",
+        element: <HomePage />,
+        errorElement: <ErrorPage />,
       },
-    ],
+      {
+        path: "/Cart",
+        element: <CartPage />,
+      },
+      {
+        path: "/Store",
+        element: <StorePage />,
+        children: [
+          {
+            path: "Product/:productId",
+            element: <ProductPage />,
+          },
+        ],
+      },
+    ]
   },
+  // {
+  //   path: "/",
+  //   element: <HomePage />,
+  //   errorElement: <ErrorPage />,
+  // },
 ]);

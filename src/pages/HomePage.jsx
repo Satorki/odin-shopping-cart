@@ -4,7 +4,6 @@ import Hero from "../components/organisms/Hero";
 const HomePage = () => {
   return (
     <div className="bg-green-700 h-screen">
-      <Navbar />
       <Hero />
     </div>
   );

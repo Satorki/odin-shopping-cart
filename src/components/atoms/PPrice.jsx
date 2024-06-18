@@ -1,7 +1,7 @@
 import React from "react";
 
-const PPrice = () => {
-  return <>10 $</>;
+const PPrice = ({priceData}) => {
+  return <>{priceData} $</>;
 };
 
 export default PPrice;
