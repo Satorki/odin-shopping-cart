@@ -4,17 +4,21 @@ import ProductExtendedInfo from "../molecules/ProductExtendedInfo";
 import Quantity from "../molecules/Quantity";
 import ButtonCartAdd from "../atoms/ButtonCartAdd";
 
-const ProductInfo = () => {
+const ProductInfo = ({ imageData, nameData, descriptionData, priceData }) => {
   return (
-    <div className="flex gap-10 justify-around m-10">
-      <div className="w-1/2 bg-yellow-300 rounded-lg">
-        <PImage />
+    <div className="flex gap-10 justify-around p-10">
+      <div className="w-1/2 rounded-lg">
+        <PImage imageData={imageData} />
       </div>
       <div className="flex flex-col justify-between bg-black/70 rounded-lg p-5 w-1/2">
-        <ProductExtendedInfo />
+        <ProductExtendedInfo
+          nameData={nameData}
+          descriptionData={descriptionData}
+          priceData={priceData}
+        />
         <div className="flex justify-between">
-        <Quantity />
-        <ButtonCartAdd />
+          <Quantity />
+          <ButtonCartAdd />
         </div>
       </div>
     </div>

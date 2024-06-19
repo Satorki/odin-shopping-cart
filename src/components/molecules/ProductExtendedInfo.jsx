@@ -3,17 +3,17 @@ import PName from "../atoms/PName";
 import PDescription from "../atoms/PDescription";
 import PPrice from "../atoms/PPrice";
 
-const ProductExtendedInfo = () => {
+const ProductExtendedInfo = ({ nameData, descriptionData, priceData }) => {
   return (
     <div className="text-white flex flex-col gap-2">
       <div className="text-xl">
-        <PName />
+        <PName nameData={nameData} />
       </div>
       <div className="">
-        <PDescription />
+        <PDescription descriptionData={descriptionData} />
       </div>
       <div className="text-lg">
-        <PPrice />
+        <PPrice priceData={priceData} />
       </div>
     </div>
   );
