@@ -7,7 +7,7 @@ import Quantity from "./Quantity";
 import CartProductSubtotal from "../atoms/CartProductSubtotal";
 import CartDataContext from "../organisms/CartDataProvider";
 
-const CartProduct = ({imageData, nameData, priceData}) => {
+const CartProduct = ({imageData, nameData, priceData, quantityData, price, input}) => {
 
 
   return (
@@ -21,8 +21,8 @@ const CartProduct = ({imageData, nameData, priceData}) => {
       </div>
       <div className="flex items-center gap-10">
         <PPrice priceData={priceData}/>
-        <Quantity />
-        <CartProductSubtotal />
+        <Quantity quantityData={quantityData}/>
+        <CartProductSubtotal price={price} input={input}/>
       </div>
     </div>
   );
