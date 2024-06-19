@@ -1,9 +1,26 @@
-import React from 'react'
+import { useContext } from "react";
+import CartDataContext from "../organisms/CartDataProvider";
+import { useParams } from "react-router-dom";
 
 const ButtonCartAdd = () => {
-  return (
-    <button className="px-5 py-2 bg-green-200 w-42 rounded-md hover:shadow-custom-hover active:shadow-custom-active">Button Cart Add</button>
-  )
-}
+  const {productId} = useParams()
+  const { cartData, setCartData, quantityItem } = useContext(CartDataContext);
 
-export default ButtonCartAdd
+
+  const updateCartData = () => {
+    setCartData([...cartData,{itemId: productId, itemQuantity: quantityItem}]);
+  };
+
+  console.log(cartData);
+
+  return (
+    <button
+      className="px-5 py-2 bg-green-200 w-42 rounded-md hover:shadow-custom-hover active:shadow-custom-active"
+      onClick={updateCartData}
+    >
+      Button Cart Add
+    </button>
+  );
+};
+
+export default ButtonCartAdd;
