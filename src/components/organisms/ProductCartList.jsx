@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import CartTable from "../atoms/CartTable";
 import CartProduct from "../molecules/CartProduct";
 import CartDataContext from "./CartDataProvider";
@@ -6,6 +6,8 @@ import DataContext from "./ShopDataProvider";
 
 const ProductCartList = () => {
   const { cartData } = useContext(CartDataContext);
+  const { subtotalVal } = useContext(CartDataContext);
+
   const shopData = useContext(DataContext);
 
   if (!shopData) {
@@ -32,17 +34,18 @@ const ProductCartList = () => {
   return (
     <>
       <CartTable />
-      {uniqueCartItemsData.map((item) => 
-      <CartProduct 
-      key={item.id}
-      imageData={item.image}
-      nameData={item.title}
-      priceData={item.price}
-      quantityData={item.itemQuantity}
-      price={item.price}
-      input={item.itemQuantity}
-      />
-      )}
+      {uniqueCartItemsData.map((item) => (
+        <CartProduct
+          key={item.id}
+          imageData={item.image}
+          nameData={item.title}
+          priceData={item.price}
+          quantityData={item.itemQuantity}
+          price={item.price}
+          itemId={item.id}
+          subtotal={subtotalVal}
+        />
+      ))}
     </>
   );
 };

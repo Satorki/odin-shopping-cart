@@ -1,12 +1,9 @@
 import React from "react";
 
-const CartProductSubtotal = ({ price, input }) => {
-  const sum = parseInt(price) * parseInt(input);
+const CartProductSubtotal = ({ price, subtotal }) => {
+  const sum = parseInt(price) * parseInt(subtotal);
 
-  console.log(price);
-  console.log(parseInt(input));
-
-  return <>{sum}</>;
+  return <>{sum} $</>;
 };
 
 export default CartProductSubtotal;
