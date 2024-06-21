@@ -8,10 +8,9 @@ const ButtonCartAdd = () => {
 
 
   const updateCartData = () => {
-    setCartData([...cartData,{itemId: productId, itemQuantity: quantityItem}]);
+    setCartData([...cartData,{itemId: productId, itemQuantity: quantityItem, itemSubtotal: 1}]);
   };
 
-  console.log(cartData);
 
   return (
     <button

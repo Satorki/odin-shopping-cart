@@ -1,35 +1,13 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import CartTable from "../atoms/CartTable";
 import CartProduct from "../molecules/CartProduct";
 import CartDataContext from "./CartDataProvider";
-import DataContext from "./ShopDataProvider";
 
 const ProductCartList = () => {
-  const { cartData } = useContext(CartDataContext);
+  const { uniqueCartItemsData } = useContext(CartDataContext);
   const { subtotalVal } = useContext(CartDataContext);
 
-  const shopData = useContext(DataContext);
-
-  if (!shopData) {
-    return <div>Loading...</div>;
-  }
-
-  const cartItemsData = cartData.map((cart) => {
-    const cartToData = shopData.find(
-      (item) => item.id === parseInt(cart.itemId)
-    );
-    if (cartToData) {
-      return {
-        ...cartToData,
-        ...cart,
-      };
-    }
-  });
-
-  const uniqueCartItemsData = Array.from(
-    new Map(cartItemsData.map((item) => [item.id, item])).values()
-  );
-
+  console.log(uniqueCartItemsData);
 
   return (
     <>
@@ -44,6 +22,7 @@ const ProductCartList = () => {
           price={item.price}
           itemId={item.id}
           subtotal={subtotalVal}
+          buttonId={item.id}
         />
       ))}
     </>

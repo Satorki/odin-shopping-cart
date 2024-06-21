@@ -7,14 +7,13 @@ import Quantity from "./Quantity";
 import CartProductSubtotal from "../atoms/CartProductSubtotal";
 import CartDataContext from "../organisms/CartDataProvider";
 
-const CartProduct = ({imageData, nameData, priceData, quantityData, price, itemId, subtotal}) => {
+const CartProduct = ({imageData, nameData, priceData, quantityData, price, itemId, subtotal, buttonId}) => {
 
-console.log(itemId);
 
   return (
     <div className="flex justify-around my-5 mx-auto items-center w-9/12">
       <div className="flex items-center gap-10">
-        <CartProductDeleteButton />
+        <CartProductDeleteButton buttonId={buttonId} />
         <div className="w-24 h-24 bg-yellow-300 rounded-lg">
           <PImage imageData={imageData} />
         </div>
@@ -23,7 +22,7 @@ console.log(itemId);
       <div className="flex items-center gap-10">
         <PPrice priceData={priceData}/>
         <Quantity quantityData={quantityData} itemId={itemId} />
-        <CartProductSubtotal price={price} subtotal={subtotal}/>
+        <CartProductSubtotal price={price} subtotal={subtotal} />
       </div>
     </div>
   );
