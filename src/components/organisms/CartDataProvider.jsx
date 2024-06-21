@@ -6,7 +6,6 @@ const CartDataContext = createContext();
 export const CartDataProvider = ({ children }) => {
   const [cartData, setCartData] = useState([]);
   const [quantityItem, setQuantityItem] = useState(1);
-  const [subtotalVal, setSubtotalVal] = useState(1);
   const [uniqueCartItemsData, setUniqueCartItemsData] = useState([]);
 
   const shopData = useContext(DataContext);
@@ -47,8 +46,6 @@ export const CartDataProvider = ({ children }) => {
         setCartData,
         quantityItem,
         setQuantityItem,
-        subtotalVal,
-        setSubtotalVal,
         uniqueCartItemsData,
         setUniqueCartItemsData,
       }}

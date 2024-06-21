@@ -5,9 +5,6 @@ import CartDataContext from "./CartDataProvider";
 
 const ProductCartList = () => {
   const { uniqueCartItemsData } = useContext(CartDataContext);
-  const { subtotalVal } = useContext(CartDataContext);
-
-  console.log(uniqueCartItemsData);
 
   return (
     <>
@@ -21,7 +18,7 @@ const ProductCartList = () => {
           quantityData={item.itemQuantity}
           price={item.price}
           itemId={item.id}
-          subtotal={subtotalVal}
+          subtotalId={item.id}
           buttonId={item.id}
         />
       ))}

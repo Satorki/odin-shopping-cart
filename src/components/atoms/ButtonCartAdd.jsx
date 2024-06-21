@@ -3,14 +3,19 @@ import CartDataContext from "../organisms/CartDataProvider";
 import { useParams } from "react-router-dom";
 
 const ButtonCartAdd = () => {
-  const {productId} = useParams()
+  const { productId } = useParams();
   const { cartData, setCartData, quantityItem } = useContext(CartDataContext);
 
-
   const updateCartData = () => {
-    setCartData([...cartData,{itemId: productId, itemQuantity: quantityItem, itemSubtotal: 1}]);
+    setCartData([
+      ...cartData,
+      {
+        itemId: productId,
+        itemQuantity: quantityItem,
+        itemSubtotal: quantityItem,
+      },
+    ]);
   };
-
 
   return (
     <button

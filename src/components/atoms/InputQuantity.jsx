@@ -1,13 +1,9 @@
 import React, { useContext, useEffect, useState } from "react";
 import CartDataContext from "../organisms/CartDataProvider";
 
-const InputQuantity = ({ quantityData, inputId }) => {
-  const {
-    uniqueCartItemsData,
-    setUniqueCartItemsData,
-    setQuantityItem,
-    setSubtotalVal,
-  } = useContext(CartDataContext);
+const InputQuantity = ({ quantityData, itemId }) => {
+  const { uniqueCartItemsData, setUniqueCartItemsData, setQuantityItem } =
+    useContext(CartDataContext);
   const [internalQuantity, setInternalQuantity] = useState(1);
 
   useEffect(() => {
@@ -16,14 +12,16 @@ const InputQuantity = ({ quantityData, inputId }) => {
 
   const updateQuantityItem = (e) => {
     const newValue = e.target.value;
+    const updatedCartItems = uniqueCartItemsData.map((item) => {
+      if (item.id === itemId) {
+        return { ...item, itemSubtotal: newValue };
+      }
+      return item;
+    });
+
     setInternalQuantity(newValue);
     setQuantityItem(newValue);
-    setSubtotalVal(newValue);
-    uniqueCartItemsData.forEach((item) => {
-      if (item.id == inputId) {
-        return setUniqueCartItemsData((item.subtotal = newValue));
-      }
-    });
+    setUniqueCartItemsData(updatedCartItems);
   };
 
   return (
