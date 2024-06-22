@@ -4,7 +4,7 @@ import CartDataContext from "../organisms/CartDataProvider";
 const InputQuantity = ({ quantityData, itemId }) => {
   const { uniqueCartItemsData, setUniqueCartItemsData, setQuantityItem } =
     useContext(CartDataContext);
-  const [internalQuantity, setInternalQuantity] = useState(1);
+  const [internalQuantity, setInternalQuantity] = useState("1");
 
   useEffect(() => {
     setInternalQuantity(quantityData);

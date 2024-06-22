@@ -6,6 +6,10 @@ import CartDataContext from "./CartDataProvider";
 const ProductCartList = () => {
   const { uniqueCartItemsData } = useContext(CartDataContext);
 
+  uniqueCartItemsData.forEach(item => {
+    return console.log(item);
+  });
+
   return (
     <>
       <CartTable />
