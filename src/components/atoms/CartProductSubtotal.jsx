@@ -5,10 +5,10 @@ const CartProductSubtotal = ({ price, subtotalId }) => {
   const { uniqueCartItemsData } = useContext(CartDataContext);
   
   const subtotalItem = uniqueCartItemsData.find((item) => item.id === subtotalId);
+  
+  console.log(price);
 
-  console.log(subtotalItem.itemSubtotal);
-
-  const sum = parseInt(price) * parseInt(subtotalItem.itemSubtotal);
+  const sum = price * parseInt(subtotalItem.itemSubtotal);
 
   return <>{sum} $</>;
 };

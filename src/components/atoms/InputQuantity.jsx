@@ -11,7 +11,13 @@ const InputQuantity = ({ quantityData, itemId }) => {
   }, [quantityData]);
 
   const updateQuantityItem = (e) => {
-    const newValue = e.target.value;
+    let newValue;
+
+    if (!/[a-zA-Z]/g.test(e.target.value)) {
+      newValue = parseInt(e.target.value, 10);
+    } else {
+      newValue = "";
+    }
     const updatedCartItems = uniqueCartItemsData.map((item) => {
       if (item.id === itemId) {
         return { ...item, itemSubtotal: newValue };
@@ -27,10 +33,11 @@ const InputQuantity = ({ quantityData, itemId }) => {
   return (
     <>
       <input
-        type="text"
+        type="number"
         onChange={updateQuantityItem}
-        className="w-10 bg-white border border-black rounded-md text-center"
+        className="w-10 h-10 bg-white border border-black rounded-md text-center"
         value={internalQuantity}
+        min="0"
       />
     </>
   );

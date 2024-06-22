@@ -10,12 +10,15 @@ export const router = createBrowserRouter([
   {
     path: "/",
     element: <RoutingPage />,
-    errorElement: <ErrorPage />,
     children: [
+      {
+        index: true,
+        element: <HomePage />,
+        errorElement: <ErrorPage />,
+      },
       {
         path: "/Home",
         element: <HomePage />,
-        errorElement: <ErrorPage />,
       },
       {
         path: "/Cart",
@@ -31,9 +34,4 @@ export const router = createBrowserRouter([
       },
     ]
   },
-  // {
-  //   path: "/",
-  //   element: <HomePage />,
-  //   errorElement: <ErrorPage />,
-  // },
 ]);
