@@ -1,14 +1,10 @@
-import React, { useContext, useEffect, useState } from "react";
+import React, { useContext } from "react";
 import CartTable from "../atoms/CartTable";
 import CartProduct from "../molecules/CartProduct";
 import CartDataContext from "./CartDataProvider";
 
 const ProductCartList = () => {
   const { uniqueCartItemsData } = useContext(CartDataContext);
-
-  uniqueCartItemsData.forEach(item => {
-    return console.log(item);
-  });
 
   return (
     <>

@@ -2,14 +2,11 @@ import React, { useContext } from "react";
 import CartDataContext from "../organisms/CartDataProvider";
 
 const CartProductDeleteButton = ({ buttonId }) => {
-  const { uniqueCartItemsData, setUniqueCartItemsData } =
-    useContext(CartDataContext);
+  const { cartData, setCartData } = useContext(CartDataContext);
 
   const deleteCartItem = () => {
-    const newCartItemsData = uniqueCartItemsData.filter(
-      (item) => item.id !== buttonId
-    );
-    setUniqueCartItemsData(newCartItemsData);
+    const newCartData = cartData.filter((item) => item.itemId !== buttonId.toString());
+    setCartData(newCartData);
   };
 
   return (
