@@ -1,10 +1,10 @@
 import React from "react";
-import logo from "../../assets/toppng.com-advance-auto-parts-logo-vector-free-400x400.png";
+import logo from "../../assets/logo.png";
 
 const Logo = () => {
   return (
     <>
-      <img src={logo} alt="" className="w-1/3"/>
+      <img src={logo} alt="" className="h-12 w-auto"/>
     </>
   );
 };

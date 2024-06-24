@@ -10,6 +10,10 @@ export default {
         'custom-hover': '0 4px 6px rgba(0, 255, 0, 0.5)',
         'custom-active': 'inset 0 4px 6px rgba(255, 0, 0, 0.5)'
       }
+    },
+    fontFamily: {
+      "montserratBlack": ["montserratBlack"],
+      "montserratMedium": ["montserratMedium"]
     }
   },
   variants: {

@@ -1,10 +1,10 @@
 import React from "react";
-import HeroImage from "../../assets/lukasz-niescioruk-x61c6dg7jkU-unsplash.jpg";
+import HeroImage from "../../assets/hero.jpg";
 
 const HomeBackground = () => {
   return (
-    <div className="relative h-96 overflow-hidden">
-      <img src={HeroImage} alt="" className="absolute "/>
+    <div className="h-screen">
+      <img src={HeroImage} alt="" className="h-full w-full object-cover"/>
     </div>
   );
 };

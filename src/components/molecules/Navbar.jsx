@@ -5,7 +5,7 @@ import { Link, NavLink } from "react-router-dom";
 
 const Navbar = () => {
   return (
-    <div className="flex justify-between bg-green-300 p-3 items-center">
+    <div className="flex justify-between p-3 items-center bg-gradient-to-l from-green-50 to-green-400">
       <NavLink to={"/Home"}>
         <Logo />
       </NavLink>
@@ -13,7 +13,7 @@ const Navbar = () => {
         <NavLink
           to={"/Store"}
           className={({ isActive }) =>
-            isActive ? "border-b border-black border-dashed" : ""
+            isActive ? "border-b border-black" : ""
           }
         >
           <NavbarLink name={"Store"} />
@@ -21,7 +21,7 @@ const Navbar = () => {
         <NavLink
           to={"/Cart"}
           className={({ isActive }) =>
-            isActive ? "border-b border-black border-dashed" : ""
+            isActive ? "border-b border-black" : ""
           }
         >
           <NavbarLink name={"Cart"} />

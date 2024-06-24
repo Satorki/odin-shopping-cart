@@ -1,5 +1,6 @@
 import Navbar from "../components/molecules/Navbar";
 import Hero from "../components/organisms/Hero";
+import LoadingPage from "./LoadingPage";
 
 const HomePage = () => {
   return (

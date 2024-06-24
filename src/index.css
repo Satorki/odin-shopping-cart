@@ -1,3 +1,15 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@font-face {
+    font-family: "montserratBlack";
+    src: local("Montserrat-Black.ttf"),
+    url("./assets/fonts/Montserrat-Black.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "montserratMedium";
+    src: local("Montserrat-Medium.ttf"),
+    url("./assets/fonts/Montserrat-Medium.ttf") format("truetype");
+}
